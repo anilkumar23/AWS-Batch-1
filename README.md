@@ -1,9 +1,9 @@
 sudo yum update
 sudo yum install java
 java --version
-wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.58/bin/apache-tomcat-9.0.58.tar.gz
-tar xfvz apache-tomcat-9.0.58.tar.gz
-cd apache-tomcat-9.0.58
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
+tar xfvz apache-tomcat-9.0.78.tar.gz
+cd apache-tomcat-9.0.78
 cd webapps/manager/META-INF/
 ls
 vi <ur filename>
@@ -15,8 +15,7 @@ if you got an error like site cant be reached follow below steps
 2. edit inbound rules
 3. add all traffic and source as anywhere and save your configuration
 
-
 <role rolename="manager-gui"/>
-<user username="admin" password="password" roles="manager-gui"/>
+<user username="tomcat" password="tomcat" roles="tomcat, manager-gui"/>
 
 https://github.com/anilkumar23/AWS-Batch-1
